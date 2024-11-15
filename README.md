@@ -69,8 +69,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 To run the project, follow these steps:
 
-1. **Clone the repository:**
-
 ```bash
 git clone git@github.com:Abdelrahman120/ProductsApp.git
 cd ProductsApp
