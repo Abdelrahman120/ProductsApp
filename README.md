@@ -72,6 +72,24 @@ To run the project, follow these steps:
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/your-laravel-project.git
-cd your-laravel-project
-
+git clone git@github.com:Abdelrahman120/ProductsApp.git
+cd ProductsApp
+composer install
+cp .env.example .env
+php artisan key:generate
+Create the database for the project on phpmyadmin or Mysql workbench.
+in .env (
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+)Make sure to adjust the paths, database name, and user credentials in the .env file according to your environment.
+Move the file 2024_11_14_212639_create_pharmacy_product_table.php from the migrations folder ,Move it to another folder temporarily.
+php artisan migrate
+Move the 2024_11_14_212639_create_pharmacy_product_table.php file back to the migrations folder.
+php artisan migrate
+php artisan db:seed
+php artisan storage:link
+php artisan serve
